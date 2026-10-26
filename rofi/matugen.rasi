@@ -1,0 +1,15 @@
+/* Ember Shell - fallback Rofi palette */
+/* This file is replaced by Matugen at runtime. */
+
+* {
+    bg: #14100e;
+    surface: #1f1916;
+    surface_alt: #2b231f;
+    fg: #f3e9e2;
+    muted: #a99a90;
+    accent: #f2a65a;
+    accent_soft: #ffd0a1;
+    border: #3b3029;
+    critical: #e06c75;
+    on_accent: #14100e;
+}

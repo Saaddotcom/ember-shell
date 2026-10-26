@@ -1,0 +1,80 @@
+/* Ember Shell - Rofi launcher */
+
+configuration {
+    modi: "drun";
+    show-icons: false;
+    drun-display-format: "{name}";
+    sort: true;
+    case-sensitive: false;
+    matching: "fuzzy";
+    terminal: "kitty";
+}
+
+@import "matugen.rasi"
+
+* {
+    font: "JetBrainsMono Nerd Font 11";
+    background-color: transparent;
+    text-color: @fg;
+    border-color: @border;
+}
+
+window {
+    location: center;
+    anchor: center;
+    width: 560px;
+    border: 1px;
+    border-radius: 16px;
+    background-color: @surface;
+    padding: 0;
+}
+
+mainbox {
+    padding: 12px;
+    spacing: 8px;
+    background-color: transparent;
+}
+
+inputbar {
+    background-color: @surface_alt;
+    border-radius: 10px;
+    padding: 8px 12px;
+    spacing: 8px;
+}
+
+prompt {
+    text-color: @accent;
+}
+
+entry {
+    text-color: @fg;
+    placeholder: "Search applications";
+    placeholder-color: @muted;
+}
+
+case-indicator {
+    text-color: @muted;
+}
+
+listview {
+    lines: 8;
+    spacing: 4px;
+    background-color: transparent;
+    scrollbar: false;
+}
+
+element {
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-color: @fg;
+}
+
+element selected {
+    background-color: @accent;
+    text-color: @on_accent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+}
