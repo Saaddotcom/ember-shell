@@ -1,0 +1,26 @@
+[config]
+version_check = false
+caching = false
+
+# Hyprpaper is handled by scripts/wallpaper-change.sh.
+[config.wallpaper]
+set = false
+
+[templates.waybar]
+input_path = '~/.config/matugen/templates/waybar.css'
+output_path = '~/.config/waybar/colors.css'
+post_hook = 'pkill -SIGUSR2 waybar || true'
+
+[templates.kitty]
+input_path = '~/.config/matugen/templates/kitty.conf'
+output_path = '~/.config/kitty/colors.conf'
+post_hook = 'pkill -SIGUSR1 kitty || true'
+
+[templates.rofi]
+input_path = '~/.config/matugen/templates/rofi.rasi'
+output_path = '~/.config/rofi/matugen.rasi'
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hypr-colors.conf'
+output_path = '~/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'
