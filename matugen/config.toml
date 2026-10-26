@@ -2,10 +2,6 @@
 version_check = false
 caching = false
 
-# Hyprpaper is handled by scripts/wallpaper-change.sh.
-[config.wallpaper]
-set = false
-
 [templates.waybar]
 input_path = '~/.config/matugen/templates/waybar.css'
 output_path = '~/.config/waybar/colors.css'
