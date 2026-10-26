@@ -1,0 +1,121 @@
+@import "colors.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "JetBrains Mono", monospace;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0;
+    min-height: 0;
+    padding: 0;
+}
+
+window#waybar {
+    background-color: alpha(@surface, 0.94);
+    border: 1px solid alpha(@border, 0.85);
+    border-radius: 16px;
+    color: @text;
+    padding: 0 6px;
+}
+
+.modules-left {
+    margin-left: 2px;
+}
+
+.modules-right {
+    margin-right: 2px;
+}
+
+#workspaces {
+    margin-left: 2px;
+}
+
+#workspaces button {
+    background: transparent;
+    border-radius: 9px;
+    color: @muted;
+    margin: 0 1px;
+    padding: 0 7px;
+}
+
+#workspaces button.empty {
+    color: alpha(@muted, 0.45);
+}
+
+#workspaces button.visible {
+    color: @accent_soft;
+}
+
+#workspaces button:hover {
+    background-color: alpha(@accent, 0.16);
+    color: @accent_soft;
+}
+
+#workspaces button.active {
+    background-color: @accent;
+    color: @bg;
+}
+
+#workspaces button.urgent {
+    background-color: @critical;
+    color: @bg;
+}
+
+#window {
+    color: @muted;
+    font-weight: 500;
+    margin: 0 6px;
+    padding: 0 4px;
+}
+
+window#waybar.empty #window {
+    color: transparent;
+}
+
+#clock {
+    color: @accent_soft;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 0 12px;
+}
+
+#pulseaudio,
+#network,
+#cpu,
+#memory {
+    background-color: alpha(@surface_alt, 0.78);
+    border-radius: 9px;
+    color: @text;
+    margin: 4px 2px;
+    padding: 0 8px;
+}
+
+#cpu,
+#memory {
+    color: @muted;
+}
+
+#pulseaudio:hover,
+#network:hover,
+#cpu:hover,
+#memory:hover {
+    background-color: alpha(@accent, 0.18);
+    color: @accent_soft;
+}
+
+#pulseaudio.muted,
+#network.disconnected {
+    color: @critical;
+}
+
+tooltip {
+    background-color: @surface;
+    border: 1px solid @border;
+    border-radius: 8px;
+}
+
+tooltip label {
+    color: @text;
+    padding: 6px 8px;
+}

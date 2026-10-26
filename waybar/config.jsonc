@@ -1,0 +1,63 @@
+{
+    // Floating pill geometry. The fixed width keeps it centered on 1366x768
+    // and larger displays; adjust it if you prefer a wider or narrower bar.
+    "layer": "top",
+    "position": "top",
+    "height": 27,
+    "width": 960,
+    "margin-top": 8,
+    "spacing": 4,
+    "fixed-center": true,
+    "exclusive": true,
+    "reload_style_on_change": true,
+
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "cpu", "memory"],
+
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "sort-by-number": true,
+        "persistent-workspaces": {
+            "*": 5
+        }
+    },
+
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 40
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip-format": "{:%A, %d %B %Y}"
+    },
+
+    "pulseaudio": {
+        "format": "  {volume}%",
+        "format-muted": "  muted",
+        "tooltip-format": "{desc}",
+        "scroll-step": 5
+    },
+
+    "network": {
+        "interval": 5,
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": "  {ifname}",
+        "format-disconnected": "  offline",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ifname}: {ipaddr}",
+        "tooltip-format-disconnected": "No connection"
+    },
+
+    "cpu": {
+        "interval": 3,
+        "format": "  {usage}%"
+    },
+
+    "memory": {
+        "interval": 5,
+        "format": "  {percentage}%",
+        "tooltip-format": "{used:0.1f} GiB / {total:0.1f} GiB"
+    }
+}

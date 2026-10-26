@@ -1,0 +1,10 @@
+/* Placeholder Ember palette. Matugen replaces these values at runtime. */
+@define-color bg #14100e;
+@define-color surface #1f1916;
+@define-color surface_alt #2b231f;
+@define-color text #f3e9e2;
+@define-color muted #a99a90;
+@define-color accent #f2a65a;
+@define-color accent_soft #ffd0a1;
+@define-color border #3b3029;
+@define-color critical #e06c75;
