@@ -54,6 +54,12 @@ Install Matugen with your preferred AUR helper (`matugen-bin`) or from upstream.
 > [!WARNING]
 > Back up any existing `~/.config/hypr`, `~/.config/waybar`, `~/.config/kitty`, `~/.config/rofi`, and `~/.config/matugen` first. If you already have a Hyprland setup, merge these files instead of overwriting your configuration.
 
+If you already have ~/.config/hypr/hyprland.lua (a Lua config), move it aside before copying. Hyprland may load both files and the two configs could conflict:
+
+```bash
+mv ~/.config/hypr/hyprland.lua ~/hyprland.lua.bak
+```
+
 Clone the repository:
 
 ```bash
@@ -76,10 +82,6 @@ cp -r scripts/. ~/.config/hypr/scripts/
 
 chmod +x ~/.config/hypr/scripts/*.sh
 ```
-
-If you already have ~/.config/hypr/hyprland.lua (a Lua config), move it aside before copying. Hyprland may load both files and the two configs could conflict:
-
-mv ~/.config/hypr/hyprland.lua ~/hyprland.lua.bak
 
 Then log out and select Hyprland, or run `Hyprland` from a TTY.
 
