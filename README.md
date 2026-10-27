@@ -4,6 +4,13 @@ A warm, low-resource Hyprland rice for everyday laptops.
 
 Ember Shell is a small Hyprland setup designed for 1366x768 displays and larger screens. It keeps the process list short, disables blur by default, and uses a single centered Waybar pill instead of a full-width bar. The palette can follow any wallpaper through Matugen, with sensible fallback colors included.
 
+## Status
+
+- This is experimental and under active development.
+- Verified: the config files load without syntax errors, and the Waybar config runs on a live desktop.
+- Not yet verified: a full Hyprland session on real hardware, keybinds, Rofi, the scratchpad, and Matugen palette generation.
+- Built for Hyprland 0.56 and Arch Linux. Use at your own risk, and back up your `~/.config` first.
+
 <!-- Replace this placeholder with a desktop screenshot at assets/screenshot.png. -->
 <p align="center">
   <strong>Screenshot placeholder</strong><br>
