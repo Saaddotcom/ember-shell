@@ -1,4 +1,4 @@
-# Ember Shell
+<p align="center"><img src="assets/banner.png" alt="Ember Shell" width="600"></p>
 
 A warm, low-resource Hyprland rice for everyday laptops.
 
