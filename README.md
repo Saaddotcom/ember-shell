@@ -11,11 +11,7 @@ Ember Shell is a small Hyprland setup designed for 1366x768 displays and larger 
 - Not yet verified: a full Hyprland session on real hardware, keybinds, Rofi, the scratchpad, and Matugen palette generation.
 - Built for Hyprland 0.56 and Arch Linux. Use at your own risk, and back up your `~/.config` first.
 
-<!-- Replace this placeholder with a desktop screenshot at assets/screenshot.png. -->
-<p align="center">
-  <strong>Screenshot placeholder</strong><br>
-  Add a desktop capture at <code>assets/screenshot.png</code>.
-</p>
+Screenshot: coming soon.
 
 ## Features
 
