@@ -20,11 +20,11 @@ Ember Shell is a small Hyprland setup designed for 1366x768 displays and larger 
 ## Features
 
 - Compact Hyprland config with short, non-bouncy transitions and no blur by default.
-- Fixed 960px Waybar pill that stays centered on 1366x768 and larger displays.
+- Fixed-width Waybar pill, intended to stay centered on 1366x768 and larger displays.
 - Matugen palette generation for Hyprland borders, Waybar, Kitty, and Rofi.
 - Fallback palettes so the desktop remains usable before Matugen runs.
-- Floating scratchpad terminal on `SUPER+U`.
-- Matugen-styled Rofi launcher on `SUPER+D`.
+- Floating scratchpad terminal on `SUPER+U` (untested).
+- Rofi launcher on `SUPER+D`, with Matugen colors (untested).
 - Keybind cheatsheet generated directly from `hypr/binds.conf` on `SUPER+H`.
 - Generic monitor fallback and portable `~` / `$HOME` paths.
 - No Hyprland plugins required.
@@ -57,7 +57,7 @@ Install Matugen with your preferred AUR helper (`matugen-bin`) or from upstream.
 Clone the repository:
 
 ```bash
-git clone <repository-url> ~/ember-shell
+git clone https://github.com/Saaddotcom/ember-shell.git ~/ember-shell
 cd ~/ember-shell
 ```
 
@@ -77,7 +77,11 @@ cp -r scripts/. ~/.config/hypr/scripts/
 chmod +x ~/.config/hypr/scripts/*.sh
 ```
 
-Log out and select Hyprland, or run `Hyprland` from a TTY.
+If you already have ~/.config/hypr/hyprland.lua (a Lua config), move it aside before copying. Hyprland may load both files and the two configs could conflict:
+
+mv ~/.config/hypr/hyprland.lua ~/hyprland.lua.bak
+
+Then log out and select Hyprland, or run `Hyprland` from a TTY.
 
 Set a wallpaper and generate the first palette:
 
@@ -125,8 +129,8 @@ zsh/        Optional append-only shell additions
 
 ## Notes
 
-- Window rules use the Hyprland 0.53+ `windowrule` syntax.
-- The plain `rofi` package runs through XWayland; keep XWayland enabled.
+- Window rules are written for the Hyprland 0.53+ `windowrule` syntax and are not yet verified on 0.56.
+- The plain `rofi` package may need XWayland on some builds. This is unverified on Rofi 2.0.
 - The scratchpad and cheatsheet helpers assume Kitty, even if `$terminal` is changed for normal terminal launches.
 - The cheatsheet prefers `less` for scrolling and falls back to a static view.
 - Matugen is optional, but the fallback palette will not follow wallpaper changes.
